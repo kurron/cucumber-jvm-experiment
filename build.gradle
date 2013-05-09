@@ -40,7 +40,6 @@ dependencies {
     testCompile "junit:junit-dep:${junitVersion}"
     testCompile "org.hamcrest:hamcrest-all:${hamcrestVersion}"
     testCompile "info.cukes:cucumber-junit:${cucumberVersion}"
-    testCompile "info.cukes:cucumber-java:${cucumberVersion}"
     testCompile "info.cukes:cucumber-groovy:${cucumberVersion}"
 
     runtime "org.slf4j:jcl-over-slf4j:${slf4jVersion}"
