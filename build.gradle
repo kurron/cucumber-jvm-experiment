@@ -16,9 +16,6 @@ defaultTasks 'clean', 'projectReport', 'build'
 
 repositories {
     mavenCentral()
-    maven {
-        url "http://repo.springsource.org/libs-release"
-    }
 }
 
 configurations {
@@ -47,8 +44,4 @@ dependencies {
     runtime "org.slf4j:log4j-over-slf4j:${slf4jVersion}"
     runtime "ch.qos.logback:logback-classic:${logbackVersion}"
     runtime "ch.qos.logback:logback-core:${logbackVersion}"
-}
-
-task generateWrapper( type: Wrapper ) {
-    gradleVersion = '1.5'
 }
