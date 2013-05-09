@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <contextName>CUCUMBER</contextName>
+    <property name="MESSAGE_FORMAT"
+              value="%contextName %-5.5relative %2(%.-1level) %thread %-35.35logger{0} %message %throwable{short}%n"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${MESSAGE_FORMAT}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.kurron" level="ALL"/>
+
+    <root level="ALL">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
