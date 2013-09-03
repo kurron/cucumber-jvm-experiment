@@ -1,9 +1,7 @@
 package org.kurron.cucumber.groovy
 
-import cucumber.api.PendingException
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-
 
 this.metaClass.mixin(cucumber.api.groovy.Hooks)
 this.metaClass.mixin(cucumber.api.groovy.EN)

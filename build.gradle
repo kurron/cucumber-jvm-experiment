@@ -33,6 +33,7 @@ dependencies {
     compile "org.slf4j:slf4j-ext:${slf4jVersion}"
 
     testCompile "org.springframework:spring-context:${springFrameworkVersion}"
+    testCompile "org.springframework:spring-webmvc:${springFrameworkVersion}"
     testCompile "org.springframework:spring-test:${springFrameworkVersion}"
     testCompile "info.cukes:cucumber-junit:${cucumberVersion}"
     testCompile "info.cukes:cucumber-groovy:${cucumberVersion}"
