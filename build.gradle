@@ -22,6 +22,10 @@ configurations.all {
     exclude group: 'commons-logging'
     exclude group: 'log4j'
 }
+test {
+    reports.junitXml.enabled = false
+    reports.html.enabled = false
+}
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
