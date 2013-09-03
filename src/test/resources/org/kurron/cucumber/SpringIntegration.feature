@@ -4,3 +4,4 @@ Feature: Spring Integration
     Given A valid REST template
     When I invoke GET on wwww.google.com
     Then I should get a 200 status code
+    And a filled in body

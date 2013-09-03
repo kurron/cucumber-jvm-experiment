@@ -35,4 +35,9 @@ class StepDefinitions {
         assert response
         assert response.statusCode.value() == arg1
     }
+
+    @Then( '^a filled in body$' )
+    void '^a filled in body$'() {
+        assert response.body
+    }
 }
