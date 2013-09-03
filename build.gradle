@@ -21,25 +21,18 @@ repositories {
 configurations.all {
     exclude group: 'commons-logging'
     exclude group: 'log4j'
-    exclude module: 'junit-dep'
-    exclude module: 'hamcrest-core'
 }
 
 dependencies {
-    compile module( "org.codehaus.groovy:groovy-all:${groovyVersion}" )
-    compile "org.springframework:spring-context:${springFrameworkVersion}"
-    compile "org.springframework:spring-aop:${springFrameworkVersion}"
-    compile "org.springframework:spring-aspects:${springFrameworkVersion}"
+    compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
     compile "org.slf4j:slf4j-api:${slf4jVersion}"
     compile "org.slf4j:slf4j-ext:${slf4jVersion}"
 
+    testCompile "org.springframework:spring-context:${springFrameworkVersion}"
     testCompile "org.springframework:spring-test:${springFrameworkVersion}"
-    testCompile "org.spockframework:spock-core:${spockVersion}"
-    testCompile "org.spockframework:spock-spring:${spockVersion}"
-    testCompile "junit:junit-dep:${junitVersion}"
-    testCompile "org.hamcrest:hamcrest-all:${hamcrestVersion}"
     testCompile "info.cukes:cucumber-junit:${cucumberVersion}"
     testCompile "info.cukes:cucumber-groovy:${cucumberVersion}"
+    testCompile "info.cukes:cucumber-spring:${cucumberVersion}"
 
     runtime "org.slf4j:jcl-over-slf4j:${slf4jVersion}"
     runtime "org.slf4j:jul-to-slf4j:${slf4jVersion}"
