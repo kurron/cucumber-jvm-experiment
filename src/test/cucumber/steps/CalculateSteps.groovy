@@ -1,20 +1,24 @@
 package steps
 
-import cucumber.api.PendingException
+import cucumber.api.groovy.EN
+import cucumber.api.groovy.Hooks
+import org.example.Calculator
 
 /**
- * St.
+ * Steps needed to run the Calculate feature.
  **/
 
-this.metaClass.mixin( cucumber.api.groovy.Hooks )
-this.metaClass.mixin( cucumber.api.groovy.EN )
+this.metaClass.mixin( Hooks )
+this.metaClass.mixin( EN )
 
-Given( ~'^the input "([^"]*)"$' ) { String arg1 -> // Express the Regexp above with the code you wish you had
-        throw new PendingException()
+Given( ~'^the input "([^"]*)"$' ) { String input ->
+    calculator = new Calculator( input: input )
 }
-When( ~'^the calculator is run$' ) { -> // Express the Regexp above with the code you wish you had
-        throw new PendingException()
+
+When( ~'^the calculator is run$' ) { ->
+    result = calculator.run()
 }
-Then( ~'^the output should be "([^"]*)"$' ) { String arg1 -> // Express the Regexp above with the code you wish you had
-    throw new PendingException()
+
+Then( ~'^the output should be "([^"]*)"$' ) { String output ->
+    assert result == output
 }
