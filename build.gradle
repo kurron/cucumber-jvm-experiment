@@ -4,11 +4,7 @@ apply plugin: 'project-report'
 defaultTasks 'clean', 'projectReport', 'build'
 
 repositories {
-    mavenCentral()
-    maven {
-        description 'Cucumber JVM snapshot repository'
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-    }
+    jcenter()
 }
 
 configurations.all {
