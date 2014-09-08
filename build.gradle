@@ -11,6 +11,7 @@ configurations.all {
     exclude group: 'commons-logging'
     exclude group: 'log4j'
 }
+
 test {
     reports.junitXml.enabled = true
     reports.html.enabled = true
