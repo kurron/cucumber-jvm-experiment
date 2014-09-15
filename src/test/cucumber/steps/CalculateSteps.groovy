@@ -16,9 +16,9 @@ Given( ~'^the input "([^"]*)"$' ) { String input ->
 }
 
 When( ~'^the calculator is run$' ) { ->
-    result = calculator.run()
+    bob = calculator.run()
 }
 
 Then( ~'^the output should be "([^"]*)"$' ) { String output ->
-    assert result == output
+    assert bob == output
 }
